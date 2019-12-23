@@ -1,0 +1,28 @@
+google-site-verification=n3CAFkvy04CNX2MmQqD3HSAXvIPzUxAtzsuI20SxO_0
+
+how to use props
+
+- parent
+<AkunPPM :npm="mhs.npm"/>
+
+- child
+<template>
+  <div>
+    {{npm}}
+  </div>
+</template>
+
+export default {
+  props: {
+    npm: String,
+    name: {
+      type: Object,
+      default: () => {
+        return {
+          firstName: 'Unknown',
+          lastName: ''
+        }
+      }
+    }
+  },
+}
